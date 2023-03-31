@@ -5,7 +5,7 @@ from langdetect import detect
 
 url_checker = APIRouter()
 
-@app.get('/getUrl')
+@url_checker.get('/getUrl')
 async def analize_url(url: str):
     
     #Analice if page is translated to Hindi
