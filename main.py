@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from route.urlChecker import url_checker
 
 app = FastAPI()
+app.include_router(url_checker)
 
 class Msg(BaseModel):
     msg: str
